@@ -151,7 +151,7 @@ def start(doc, custom_actions=None, title='', ajax_handlers=None, port=8222):
     s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     while 1:
         try:
-            s.bind(('127.0.0.1',port))
+            s.bind(('0.0.0.0',port))
             s.close()
             break
         except socket.error as e:
